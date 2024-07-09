@@ -103,12 +103,10 @@ default_args = {
 with DAG("Final",
     default_args=default_args,
     tags=['Test'],
-    schedule_interval = '@once' # '@once' '0 8 * * *'
+    schedule_interval = '́* * * *' # '@once' '0 8 * * *'
 ) as dag:
 
     starting = BashOperator(task_id = 'starting', bash_command = 'echo "Chuẩn bị cào dữ liệu"')
-
-    # create_folder= BashOperator(task_id='create_folder_task', bash_command='mkdir /opt/airflow/share_data',)
 
     create_file= BashOperator(task_id='create_file_task', bash_command='touch /opt/airflow/share_data/database.db',)
     
