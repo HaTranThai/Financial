@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<div class="wrapper d-flex justify-content-center align-content-center py-5">
+  <div class="form-box col-xxl-5 col-sm-10 align-content-center register">
+    <span class="icon-close"><i class="fa-solid fa-x"></i></span>
+    <h2 class="text-center py-3">Đăng ký</h2>
+    <form class="row g-3 justify-content-around flex-direction-column align-content-around" method="POST">
+      <div class="form-group">
+        <label for="inputUsername" class="form-label">Tên tài khoản</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên tài khoản" />
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="form-label">Địa chỉ Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" />
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="password1" name="password1"
+          placeholder="Nhập mật khẩu tối thiểu 5 ký tự" />
+      </div>
+      <div class="form-group">
+        <label for="inputPassword2" class="form-label">Nhập lại mật khẩu</label>
+        <input type="password" class="form-control" id="password2" name="password2" placeholder="Nhập lại mật khẩu" />
+      </div>
+      <button type="submit" class="btn btn--primary" style="width: auto; height: auto;">Đăng ký</button>
+      <p class="text-center">
+        Bạn đã có tài khoản? <a class="login" href="/login">Đăng nhập</a>
+      </p>
+    </form>
+  </div>
+</div>
+{% endblock %}

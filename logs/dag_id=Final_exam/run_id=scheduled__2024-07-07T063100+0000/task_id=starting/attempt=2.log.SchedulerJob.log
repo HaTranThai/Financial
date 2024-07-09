@@ -1,0 +1,2 @@
+[2024-07-07T06:33:43.613+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: Final_exam.starting scheduled__2024-07-07T06:31:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
+[2024-07-07T06:43:10.641+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: Final_exam.starting scheduled__2024-07-07T06:31:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

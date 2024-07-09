@@ -1,0 +1,46 @@
+[2024-07-07T09:30:04.485+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-07T09:30:04.518+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Final_exam.get_data manual__2024-07-07T09:26:58.090565+00:00 [queued]>
+[2024-07-07T09:30:04.531+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Final_exam.get_data manual__2024-07-07T09:26:58.090565+00:00 [queued]>
+[2024-07-07T09:30:04.532+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-07T09:30:04.554+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-07 09:26:58.090565+00:00
+[2024-07-07T09:30:04.563+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=136) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-07T09:30:04.565+0000] {standard_task_runner.py:63} INFO - Started process 138 to run task
+[2024-07-07T09:30:04.565+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Final_exam', 'get_data', 'manual__2024-07-07T09:26:58.090565+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmplo2d9iq8']
+[2024-07-07T09:30:04.567+0000] {standard_task_runner.py:91} INFO - Job 73: Subtask get_data
+[2024-07-07T09:30:04.637+0000] {task_command.py:426} INFO - Running <TaskInstance: Final_exam.get_data manual__2024-07-07T09:26:58.090565+00:00 [running]> on host 49c558fe4c5c
+[2024-07-07T09:30:04.787+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='ha20040204@gmail.com' AIRFLOW_CTX_DAG_OWNER='HA' AIRFLOW_CTX_DAG_ID='Final_exam' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T09:26:58.090565+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-07T09:26:58.090565+00:00'
+[2024-07-07T09:30:04.789+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-07T09:30:05.494+0000] {logging_mixin.py:188} INFO -       ID        Date    Open  ...     Volume  Changed  Changed_rate
+0   AAPL  2024-04-30  173.33  ...   65934800    -3.17        -1.83%
+1   AAPL  2024-04-29  173.37  ...   68169400     4.20         2.48%
+2   AAPL  2024-04-26  169.88  ...   44838400    -0.59        -0.35%
+3   AAPL  2024-04-25  169.53  ...   50558300     0.87         0.51%
+4   AAPL  2024-04-24  166.54  ...   48251800     2.12         1.27%
+5   AAPL  2024-04-23  165.35  ...   49537800     1.06         0.64%
+6   AAPL  2024-04-22  165.52  ...   48116400     0.84         0.51%
+7   AAPL  2024-04-19  166.21  ...   67772100    -2.04        -1.22%
+8   AAPL  2024-04-18  168.03  ...   43122900    -0.96        -0.57%
+9   AAPL  2024-04-17  169.61  ...   50901200    -1.38        -0.81%
+10  AAPL  2024-04-16  171.75  ...   73711200    -3.31        -1.92%
+11  AAPL  2024-04-15  175.36  ...   73531800    -3.86        -2.19%
+12  AAPL  2024-04-12  174.26  ...  101593300     1.51         0.86%
+13  AAPL  2024-04-11  168.34  ...   91070300     7.26         4.33%
+14  AAPL  2024-04-10  168.80  ...   49709300    -1.89        -1.11%
+15  AAPL  2024-04-09  168.70  ...   42451200     1.22         0.72%
+16  AAPL  2024-04-08  169.03  ...   37425500    -1.13        -0.67%
+17  AAPL  2024-04-05  169.59  ...   42055200     0.76         0.45%
+18  AAPL  2024-04-04  170.29  ...   53704400    -0.83        -0.49%
+19  AAPL  2024-04-03  168.79  ...   47691700     0.81         0.48%
+20  AAPL  2024-04-02  169.08  ...   49329500    -1.19         -0.7%
+21  AAPL  2024-04-01  171.19  ...   46240500    -1.45        -0.85%
+
+[22 rows x 10 columns]
+[2024-07-07T09:30:05.496+0000] {logging_mixin.py:188} INFO - Successfully.
+[2024-07-07T09:30:05.497+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-07T09:30:05.498+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-07T09:30:05.512+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Final_exam, task_id=get_data, run_id=manual__2024-07-07T09:26:58.090565+00:00, execution_date=20240707T092658, start_date=20240707T093004, end_date=20240707T093005
+[2024-07-07T09:30:05.588+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-07T09:30:05.618+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-07T09:30:05.622+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

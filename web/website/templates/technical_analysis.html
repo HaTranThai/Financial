@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<h2 class="text-center" style="margin: 40px; font-weight: bolder;">Phân tích kỹ thuật</h2>
+<form class="data-market__search data-market__width" method="POST"
+    style="display: flex;justify-content: center;align-items: center; border: none;">
+    <select class="data-market__select" id="technical-list" name="technical-list">
+        <option value="Giá đóng cửa">Giá đóng cửa</option>
+        <option value="Khối lượng giao dịch">Khối lượng giao dịch</option>
+        <option value="Trung bình di động">Trung bình di động</option>
+    </select>
+    <button class="btn btn--primary" style="outline: none; float: right;">Tìm kiếm</button>
+</form>
+<div class="image-container" style="margin-top: 20px;"><img src="{{url}}"></div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<h2 class="text-center" style="margin: 40px; font-weight: bolder;">Tin tức mới nhất trong ngày</h2>
+{% for title, link, publisher, time, img_url, related_tickers in items %}
+<div class="row" style="margin-top: 40px">
+  <div class="col-3">
+    <img src="{{img_url}}" style="float: right; border-radius: 6px; width: 120px; height: 120px;" />
+  </div>
+
+  <div class="col-9" style="position: relative;">
+    <h5 style="font-weight: bold">
+      <a class="nav-link text-white" href="{{link}}">{{title}}</a>
+    </h5>
+    <p class="publiser" style="color: darkgray; font-size: 12px">
+      {{time}}, By
+      <span class="fst-italic">{{publisher}}</span>
+    </p>
+    <p class="related-tickers" style="position: absolute; bottom: 0; margin-bottom: 0;">
+      Các mã liên quan:
+      {% for ticker in related_tickers[:-1] %}
+      {{ticker}},
+      {% endfor %}
+      {{related_tickers[-1]}}
+    </p>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

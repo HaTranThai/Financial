@@ -1,0 +1,1 @@
+[2024-07-07T12:25:55.480+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: Final_exam.insert_db manual__2024-07-07T12:07:10.168261+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

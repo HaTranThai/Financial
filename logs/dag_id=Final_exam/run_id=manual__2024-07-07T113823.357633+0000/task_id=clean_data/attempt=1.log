@@ -1,0 +1,105 @@
+[2024-07-07T11:38:49.684+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-07T11:38:49.714+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Final_exam.clean_data manual__2024-07-07T11:38:23.357633+00:00 [queued]>
+[2024-07-07T11:38:49.727+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Final_exam.clean_data manual__2024-07-07T11:38:23.357633+00:00 [queued]>
+[2024-07-07T11:38:49.728+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-07T11:38:49.750+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_data> on 2024-07-07 11:38:23.357633+00:00
+[2024-07-07T11:38:49.759+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=90) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-07T11:38:49.762+0000] {standard_task_runner.py:63} INFO - Started process 92 to run task
+[2024-07-07T11:38:49.761+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Final_exam', 'clean_data', 'manual__2024-07-07T11:38:23.357633+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpniwlert7']
+[2024-07-07T11:38:49.763+0000] {standard_task_runner.py:91} INFO - Job 82: Subtask clean_data
+[2024-07-07T11:38:49.841+0000] {task_command.py:426} INFO - Running <TaskInstance: Final_exam.clean_data manual__2024-07-07T11:38:23.357633+00:00 [running]> on host 33ecc1cdac44
+[2024-07-07T11:38:49.997+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='ha20040204@gmail.com' AIRFLOW_CTX_DAG_OWNER='HA' AIRFLOW_CTX_DAG_ID='Final_exam' AIRFLOW_CTX_TASK_ID='clean_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-07T11:38:23.357633+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-07T11:38:23.357633+00:00'
+[2024-07-07T11:38:49.999+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-07T11:38:50.046+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:38:50.047+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:38:54.479+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:38:54.480+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:38:59.003+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:38:59.005+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:00.879+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:00.886+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:03.028+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:03.030+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:04.312+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:04.313+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:08.607+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:08.608+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:13.293+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:13.294+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:21.285+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:21.287+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:27.497+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:27.498+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:28.451+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:28.452+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:28.752+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:28.753+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:30.166+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:30.168+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:31.025+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:39: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls.append(round(data.iloc[i][4] - data.iloc[i + 1][4], 2))
+
+[2024-07-07T11:39:31.027+0000] {warnings.py:110} WARNING - /opt/***/dags/pipeline.py:40: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  ls_rate.append(str(round(ls[i] / data.iloc[i + 1][4] * 100, 2)) + '%')
+
+[2024-07-07T11:39:31.624+0000] {logging_mixin.py:188} INFO - Successfully.
+[2024-07-07T11:39:31.624+0000] {python.py:237} INFO - Done. Returned value was: True
+[2024-07-07T11:39:31.627+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-07T11:39:31.656+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Final_exam, task_id=clean_data, run_id=manual__2024-07-07T11:38:23.357633+00:00, execution_date=20240707T113823, start_date=20240707T113849, end_date=20240707T113931
+[2024-07-07T11:39:31.698+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-07T11:39:31.731+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-07T11:39:31.734+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

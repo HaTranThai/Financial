@@ -1,0 +1,1 @@
+[2024-07-07T13:30:31.033+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: Final.cap_quyen_task manual__2024-07-07T13:29:18.431719+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

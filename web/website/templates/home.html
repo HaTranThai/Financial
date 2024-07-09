@@ -1,0 +1,108 @@
+{% extends 'base.html' %} {% block content %}
+<h2 class="text-center" style="margin: 40px; font-weight: bolder">
+  Dữ liệu chứng khoán
+</h2>
+<div class="row">
+  <!-- Ban workspace -->
+  <div class="col-7" style="left: 20px; top: 1px">
+    <div class="menu" id="stockMenu">
+      <div class="menuText">Chọn stock :</div>
+    </div>
+    <div id="data" ids="{{ids.to_dict(orient='records')}}"></div>
+    <div id="chartContainer" style="height: 500px; width: 100%"></div>
+  </div>
+  <!-- end workspace -->
+
+  <!-- Hoan workspace -->
+  <div class="col-5" , style="
+      height: 530px;
+      width: 500px;
+      padding: 0;
+      overflow-y: scroll;
+      border: 2px solid #ff9500;
+      background-color: #232836;
+      justify-content: center;
+      align-items: center;
+      scrollbar-color: grey #171a23;
+    ">
+    <table>
+      <thead>
+        <tr style="color: darkorange">
+          <th style="width: 25%; text-align: center">Mã giao dịch</th>
+          <th style="width: 25%; text-align: center">Giá đóng cửa</th>
+          <th style="width: 20%; text-align: center">Thay đổi</th>
+          <th style="width: 25%; text-align: center">Tỉ lệ thay đổi</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for index, row in data.iterrows() %} {% if row['Changed'] > 0 %}
+        <tr>
+          <td style="text-align: center">{{row['ID']}}</td>
+          <td style="text-align: center">{{row['Close']|round(2)}}</td>
+          <td style="text-align: center; color: #34c763 !important">
+            +{{row['Changed']}}
+          </td>
+          <td style="text-align: center; color: #34c763 !important">
+            {{row['Changed_rate']}}
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td style="text-align: center">{{ row['ID'] }}</td>
+          <td style="text-align: center">{{ row['Close']|round(2)}}</td>
+          <td style="text-align: center; color: #ff453a !important">
+            {{row['Changed']}}
+          </td>
+          <td style="text-align: center; color: #ff453a !important">
+            {{row['Changed_rate']}}
+          </td>
+        </tr>
+        {% endif %} {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <!-- end workspace -->
+</div>
+<br /><br /><br />
+<!-- Vu workspace -->
+<div class="tab-content container">
+  <div class="data-market__top overflow-x-auto container">
+    <div class="data-market__search data-market__width">
+      <select class="data-market__select" id="ticker" type="text" name="ticker">
+        {% for id in data['ID'].values %}
+        <option class="ID" value="{{id}}">{{id}}</option>
+        {% endfor %}
+      </select>
+      <div class="react-datepicker-wrapper">
+        <div class="react-datepicker__input-container">
+          <input type="text" placeholder="Từ ngày" class="data-market__date data-market__from" value=""
+            name="date-from" />
+        </div>
+      </div>
+      <div class="react-datepicker-wrapper">
+        <div class="react-datepicker__input-container">
+          <input type="text" placeholder="Đến ngày" class="data-market__date data-market__to" value="" name="date-to" />
+        </div>
+      </div>
+      <button class="btn btn--primary" style="outline: none" id="search">
+        Tìm kiếm
+      </button>
+    </div>
+  </div>
+  <table class="data-market__width">
+    <thead>
+      <tr style="color: darkorange">
+        <th class="sticky-code sticky-left">Ngày</th>
+        <th>Thay đổi</th>
+        <th>Giá mở cửa</th>
+        <th>Giá thấp nhất</th>
+        <th>Giá cao nhất</th>
+        <th>Giá đóng cửa</th>
+        <th>Khối lượng giao dịch</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+<!-- end workspace -->
+{% endblock %}
