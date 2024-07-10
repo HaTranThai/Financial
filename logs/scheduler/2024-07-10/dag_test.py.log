@@ -212,3 +212,323 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowTimetableInvalid: [́* * * * *] is not acceptable
 [2024-07-10T04:17:18.332+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
 [2024-07-10T04:17:18.421+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 2.646 seconds
+[2024-07-10T04:18:32.773+0000] {processor.py:161} INFO - Started process (PID=30) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:18:32.775+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:18:32.779+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:18:32.778+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:18:34.324+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:18:34.319+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́*'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́* * * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́* * * * *] is not acceptable
+[2024-07-10T04:18:34.325+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:18:34.380+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.626 seconds
+[2024-07-10T04:19:04.692+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:19:04.693+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:19:04.695+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:19:04.695+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:19:05.379+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:19:05.376+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́*'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́* * * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́* * * * *] is not acceptable
+[2024-07-10T04:19:05.380+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:19:05.399+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 0.713 seconds
+[2024-07-10T04:19:36.214+0000] {processor.py:161} INFO - Started process (PID=160) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:19:36.215+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:19:36.217+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:19:36.217+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:19:36.854+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:19:36.852+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́*'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́* * * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́* * * * *] is not acceptable
+[2024-07-10T04:19:36.855+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:19:36.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 0.662 seconds
+[2024-07-10T04:20:06.972+0000] {processor.py:161} INFO - Started process (PID=220) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:06.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:20:06.976+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:06.975+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:08.007+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:07.997+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́*'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́* * * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́* * * * *] is not acceptable
+[2024-07-10T04:20:08.009+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:08.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.093 seconds
+[2024-07-10T04:20:38.529+0000] {processor.py:161} INFO - Started process (PID=283) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:38.531+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:20:38.535+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:38.535+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:39.603+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:39.598+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́*'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́* * * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́* * * * *] is not acceptable
+[2024-07-10T04:20:39.603+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:39.626+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.113 seconds
+[2024-07-10T04:20:41.755+0000] {processor.py:161} INFO - Started process (PID=291) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:41.757+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:20:41.761+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:41.761+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:43.550+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:43.542+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:20:43.551+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:43.603+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.870 seconds
+[2024-07-10T04:20:45.211+0000] {processor.py:161} INFO - Started process (PID=309) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:45.213+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:20:45.216+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:45.216+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:46.182+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:20:46.178+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:20:46.182+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:20:46.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.023 seconds
+[2024-07-10T04:21:16.287+0000] {processor.py:161} INFO - Started process (PID=373) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:21:16.289+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:21:16.292+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:21:16.291+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:21:17.349+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:21:17.343+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:21:17.350+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:21:17.373+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.094 seconds

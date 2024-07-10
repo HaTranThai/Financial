@@ -103,7 +103,7 @@ default_args = {
 with DAG("Final",
     default_args=default_args,
     tags=['Test'],
-    schedule_interval = '́* * * * *' # '@once' '0 8 * * *'
+    schedule_interval = '́0 8 * * *' # '@once' '0 8 * * *'
 ) as dag:
 
     starting = BashOperator(task_id = 'starting', bash_command = 'echo "Chuẩn bị cào dữ liệu"')
