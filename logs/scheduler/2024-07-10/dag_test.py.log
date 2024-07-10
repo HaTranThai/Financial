@@ -532,3 +532,215 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
 [2024-07-10T04:21:17.350+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
 [2024-07-10T04:21:17.373+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.094 seconds
+[2024-07-10T04:25:37.978+0000] {processor.py:161} INFO - Started process (PID=36) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:25:37.982+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:25:37.988+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:25:37.987+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:25:39.572+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:25:39.566+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:25:39.573+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:25:39.737+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.772 seconds
+[2024-07-10T04:26:10.429+0000] {processor.py:161} INFO - Started process (PID=98) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:26:10.431+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:26:10.432+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:26:10.432+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:26:11.086+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:26:11.083+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:26:11.087+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:26:11.125+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 0.701 seconds
+[2024-07-10T04:26:41.197+0000] {processor.py:161} INFO - Started process (PID=158) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:26:41.198+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:26:41.200+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:26:41.200+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:26:41.921+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:26:41.919+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:26:41.922+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:26:41.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 0.749 seconds
+[2024-07-10T04:27:12.713+0000] {processor.py:161} INFO - Started process (PID=221) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:27:12.714+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:27:12.718+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:27:12.717+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:27:13.479+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:27:13.476+0000] {dagbag.py:452} ERROR - Failed to bag_dag: /opt/airflow/dags/dag_test.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 194, in _alphaconv
+    return cls.ALPHACONV[index][key]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: '́0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 100, in validate
+    croniter(self._expression)
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 187, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 821, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 755, in _expand
+    t = cls._alphaconv(i, t, expressions)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/croniter/croniter.py", line 196, in _alphaconv
+    raise CroniterNotAlphaError(
+croniter.croniter.CroniterNotAlphaError: [́0 8 * * *] is not acceptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 447, in _process_modules
+    dag.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 775, in validate
+    self.timetable.validate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/timetables/_cron.py", line 102, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: [́0 8 * * *] is not acceptable
+[2024-07-10T04:27:13.479+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:27:13.497+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 0.791 seconds
+[2024-07-10T04:27:34.190+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:27:34.191+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:27:34.194+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:27:34.193+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:27:34.920+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:27:35.341+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:27:35.340+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:27:35.469+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:27:35.469+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:26:00+00:00, run_after=2024-07-10 04:27:00+00:00
+[2024-07-10T04:27:35.633+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.449 seconds
+[2024-07-10T04:28:48.703+0000] {processor.py:161} INFO - Started process (PID=30) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:28:48.705+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:28:48.710+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:28:48.709+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:28:50.379+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:28:50.767+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:28:50.767+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:28:50.828+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:28:50.828+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:27:00+00:00, run_after=2024-07-10 04:28:00+00:00
+[2024-07-10T04:28:50.885+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 2.197 seconds
+[2024-07-10T04:29:21.471+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:29:21.473+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:29:21.477+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:29:21.476+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:29:22.592+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:29:22.856+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:29:22.856+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:29:22.890+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:29:22.889+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:29:00+00:00, run_after=2024-07-10 04:30:00+00:00
+[2024-07-10T04:29:22.921+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 1.461 seconds
+[2024-07-10T04:29:53.618+0000] {processor.py:161} INFO - Started process (PID=155) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:29:53.652+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:29:53.731+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:29:53.730+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:29:55.717+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:29:55.914+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:29:55.913+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:29:55.978+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:29:55.977+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:29:00+00:00, run_after=2024-07-10 04:30:00+00:00
+[2024-07-10T04:29:56.034+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 2.463 seconds
+[2024-07-10T04:30:26.389+0000] {processor.py:161} INFO - Started process (PID=226) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:30:26.397+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:30:26.401+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:30:26.401+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:30:28.273+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:30:28.485+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:30:28.484+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:30:28.540+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:30:28.540+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:30:00+00:00, run_after=2024-07-10 04:31:00+00:00
+[2024-07-10T04:30:28.593+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 2.221 seconds
+[2024-07-10T04:30:59.073+0000] {processor.py:161} INFO - Started process (PID=291) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:30:59.077+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:30:59.089+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:30:59.087+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:31:01.789+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:31:02.340+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:31:02.339+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:31:02.441+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:31:02.441+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:31:00+00:00, run_after=2024-07-10 04:32:00+00:00
+[2024-07-10T04:31:02.531+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 3.488 seconds
+[2024-07-10T04:31:32.974+0000] {processor.py:161} INFO - Started process (PID=356) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:31:32.993+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:31:33.014+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:31:33.013+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:31:35.108+0000] {processor.py:840} INFO - DAG(s) 'Final' retrieved from /opt/airflow/dags/dag_test.py
+[2024-07-10T04:31:35.583+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:31:35.583+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-10T04:31:35.648+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:31:35.647+0000] {dag.py:3954} INFO - Setting next_dagrun for Final to 2024-07-10 04:31:00+00:00, run_after=2024-07-10 04:32:00+00:00
+[2024-07-10T04:31:35.711+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 2.754 seconds
+[2024-07-10T04:31:49.344+0000] {processor.py:161} INFO - Started process (PID=389) to work on /opt/airflow/dags/dag_test.py
+[2024-07-10T04:31:49.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-10T04:31:49.351+0000] {logging_mixin.py:188} INFO - [2024-07-10T04:31:49.350+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py

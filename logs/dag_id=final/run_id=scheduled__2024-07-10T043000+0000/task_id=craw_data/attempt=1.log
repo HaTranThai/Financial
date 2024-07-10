@@ -1,0 +1,39 @@
+[2024-07-10T04:31:18.587+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-10T04:31:18.629+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Final.craw_data scheduled__2024-07-10T04:30:00+00:00 [queued]>
+[2024-07-10T04:31:18.640+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Final.craw_data scheduled__2024-07-10T04:30:00+00:00 [queued]>
+[2024-07-10T04:31:18.642+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-10T04:31:18.665+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): craw_data> on 2024-07-10 04:30:00+00:00
+[2024-07-10T04:31:18.674+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=176) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-10T04:31:18.677+0000] {standard_task_runner.py:63} INFO - Started process 178 to run task
+[2024-07-10T04:31:18.677+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Final', 'craw_data', 'scheduled__2024-07-10T04:30:00+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/dag_test.py', '--cfg-path', '/tmp/tmp_l2dt57s']
+[2024-07-10T04:31:18.679+0000] {standard_task_runner.py:91} INFO - Job 44: Subtask craw_data
+[2024-07-10T04:31:18.749+0000] {task_command.py:426} INFO - Running <TaskInstance: Final.craw_data scheduled__2024-07-10T04:30:00+00:00 [running]> on host dd74537ce0b1
+[2024-07-10T04:31:18.921+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='ha20040204@gmail.com' AIRFLOW_CTX_DAG_OWNER='HA' AIRFLOW_CTX_DAG_ID='Final' AIRFLOW_CTX_TASK_ID='craw_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-10T04:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-10T04:30:00+00:00'
+[2024-07-10T04:31:18.923+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-10T04:31:20.050+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:20.747+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:21.205+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:21.602+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:21.872+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:22.578+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:23.398+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:24.149+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:25.552+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:25.946+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:26.074+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:26.285+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:26.470+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:29.256+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:29.257+0000] {multi.py:171} ERROR - 
+1 Failed download:
+[2024-07-10T04:31:29.258+0000] {multi.py:184} ERROR - ['BVH']: YFTzMissingError('$%ticker%: possibly delisted; No timezone found')
+[2024-07-10T04:31:29.437+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-07-10T04:31:29.466+0000] {logging_mixin.py:188} INFO - Successfully.
+[2024-07-10T04:31:29.467+0000] {python.py:237} INFO - Done. Returned value was: True
+[2024-07-10T04:31:29.468+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-10T04:31:29.504+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Final, task_id=craw_data, run_id=scheduled__2024-07-10T04:30:00+00:00, execution_date=20240710T043000, start_date=20240710T043118, end_date=20240710T043129
+[2024-07-10T04:31:29.550+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-10T04:31:29.587+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-10T04:31:29.590+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
