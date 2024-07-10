@@ -990,3 +990,6 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowTimetableInvalid: Exactly 5 or 6 columns has to be specified for iterator expression.
 [2024-07-09T03:02:48.351+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_test.py
 [2024-07-09T03:02:48.386+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_test.py took 0.774 seconds
+[2024-07-09T03:03:19.939+0000] {processor.py:161} INFO - Started process (PID=5516) to work on /opt/airflow/dags/dag_test.py
+[2024-07-09T03:03:19.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_test.py for tasks to queue
+[2024-07-09T03:03:19.985+0000] {logging_mixin.py:188} INFO - [2024-07-09T03:03:19.981+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_test.py
